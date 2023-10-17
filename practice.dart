@@ -14,6 +14,9 @@ void main(){
 
   num volume =findVolume(5,breadth: 10, height: 5);//Always assign named-parameter-function findVolume to variable. Don't forget the colon to assign value. Sequence does not matter.
   print("Volume is $volume");
+
+  num rectangle = rectArea(2); //breadth value can be override by breadth:10
+  print('Area of the rectangle is $rectangle');//has a default breadth parameter of value 5
 }
 
 //By default in Dart a function returns null
@@ -66,4 +69,6 @@ void printCountries(String country1, String country2, [country3]){ //code will r
 //Name Parameters: {} is used to prevent errors if there's a large number of parameters.
 num findVolume(int length, {breadth, height}) => length * breadth *height; //num type is used when working with numbers of different data types, int or double. ALways assign to variable whenn calling
 
+//Default Parameters: {} is also used but parameters are assigned values
+num rectArea(int length, {breadth = 5}) => length * breadth;
 
